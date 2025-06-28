@@ -1,0 +1,15 @@
+button.viewmore{
+    max-width: max-content;
+    padding: 15px;
+    font-size: small;
+    background-color: transparent;
+    border: 0.5px solid;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button.viewmore > span{
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}

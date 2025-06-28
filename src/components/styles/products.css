@@ -1,0 +1,89 @@
+.backBtnContainer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 60px;
+    padding-left: 50px;
+    overflow: hidden;
+    filter: opacity(0);
+    transition-duration: .6s;
+    transition-delay: .2s;
+
+}
+
+button.back{
+    width: max-content;
+    height: max-content;
+    border: none;
+    background: none;
+    font-weight: 600;
+    position: relative;
+    left: 0;
+    color: white;
+}
+
+
+.productContainer{
+    display: grid;
+    align-items: center;
+    font-weight: 600;
+    overflow: hidden;
+    transition: all .5s ease ;
+    width: calc(100vw / 4);
+    position: relative;  
+    justify-content: center;
+}
+
+.productImgContainer{
+    display: grid;
+    justify-content: center; 
+}
+
+img[alt^="productimg"]{
+    justify-self: center;
+    filter: drop-shadow(50px 25px 12px rgb(0, 0, 0, 0.4));
+    transform: translateY(15);
+}
+
+.backText{
+    font-size: clamp(10vw, 15vw, 620px);
+    position: absolute;
+    justify-self: center;
+    z-index: -1;
+    padding-top: 90px;
+    color: white;
+    
+}
+
+.productContainer > article{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+}
+
+.productContainer > article > div{
+    margin-left: -10px;
+}
+
+.productContainer small{
+    font-size: clamp(14px, 1vw, 1.5vw);
+}
+
+.productContainer h3{
+    width: 100%;
+    max-width: 80px;
+    font-size: clamp(20px, 25px, 2vw);
+}
+
+.productInfo{
+    min-width: max-content;
+    display: grid;
+    transition: width cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin-bottom: 20px;
+}
+
+.bottomPrice{
+    position: fixed;
+    bottom: 0;
+    justify-self: center;
+}
