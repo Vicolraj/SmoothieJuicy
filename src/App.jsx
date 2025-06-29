@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Products from './components/products'
+
+import Products from './components/products.jsx'
+import Header from './components/Header.jsx'
+
 import green from './assets/products/green.png'
 import berry from './assets/products/berry.png'
 import orange from './assets/products/orange.png'
@@ -69,7 +72,8 @@ function back(){
   ]
 
   return (
-    <section className='mainContainer'>      
+    <section className='mainContainer'> 
+    <Header />
       {productData.map(item =>
          <Products 
           key={item.number}
