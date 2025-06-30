@@ -16,24 +16,47 @@ function App() {
   const [ reverseWidth4, setReverseWidth4] = useState({width: '0px'});
 
   const [productContainerWidth, setPCW] = useState({width1: "", width2: "", width3: "", width4: ""})
+  let isDesktop = window.outerWidth > 600;
 
 function expand(x){
-  switch(x){
-    case '01':
-      setPCW({width1: "100vw", width2: "0px", width3: "0px", width4: "0px"})
-    break;
-    case '02':
-      setPCW({width1: "0px", width2: "100vw", width3: "0px", width4: "0px"})
-      break;
-    case '03':
-      setPCW({width1: "0px", width2: "0px", width3: "100vw", width4: "0px"})
-      break;
-    case '04':
-      setPCW({width1: "0px", width2: "0px", width3: "0px", width4: "100vw"})
-      break;
-      default:
-        setPCW({width1: "", width2: "", width3: "", width4: ""})
-  }
+  if(isDesktop){
+      switch(x){
+        case '01':
+          setPCW({width1: "100vw", width2: "0px", width3: "0px", width4: "0px"})
+        break;
+        case '02':
+          setPCW({width1: "0px", width2: "100vw", width3: "0px", width4: "0px"})
+          break;
+        case '03':
+          setPCW({width1: "0px", width2: "0px", width3: "100vw", width4: "0px"})
+          break;
+        case '04':
+          setPCW({width1: "0px", width2: "0px", width3: "0px", width4: "100vw"})
+          break;
+          default:
+            setPCW({width1: "", width2: "", width3: "", width4: ""})
+      }
+    }
+    else{
+       setPCW({width1: "100vw", width2: "100vw", width3: "100vw", width4: "100vw"})
+      // switch(x){
+      //   case '01':
+      //     setPCW({width1: "100vw", width2: "", width3: "", width4: ""})
+      //   break;
+      //   case '02':
+      //     setPCW({width1: "", width2: "100vw", width3: "", width4: ""})
+      //     break;
+      //   case '03':
+      //     setPCW({width1: "", width2: "", width3: "100vw", width4: ""})
+      //     break;
+      //   case '04':
+      //     setPCW({width1: "", width2: "", width3: "", width4: "100vw"})
+      //     break;
+      //     default:
+      //       setPCW({width1: "", width2: "", width3: "", width4: ""})
+      // }
+    }
+  
 }
 
 
@@ -42,7 +65,10 @@ function back(){
 }
 
   function openNewProduct(){
-    setReverseWidth1({width: '0px'}); setReverseWidth2({width: '0px'}); setReverseWidth3({width: '0px'}); setReverseWidth4({width: '0px'});
+    if(isDesktop){
+      setReverseWidth1({width: '0px'}); setReverseWidth2({width: '0px'}); setReverseWidth3({width: '0px'}); setReverseWidth4({width: '0px'});
+    }
+    
   }
 
 

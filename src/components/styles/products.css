@@ -8,7 +8,6 @@
     filter: opacity(0);
     transition-duration: .6s;
     transition-delay: .2s;
-
 }
 
 button.back{
@@ -22,7 +21,6 @@ button.back{
     color: white;
     cursor: pointer;
 }
-
 
 .productContainer{
     display: grid;
@@ -54,7 +52,6 @@ img[alt^="productimg"]{
     z-index: -1;
     padding-top: 90px;
     color: white;
-    
 }
 
 .productContainer > article{
@@ -93,9 +90,10 @@ img[alt^="productimg"]{
     bottom: 0;
     justify-self: center;
     font-size: clamp(20px, 2vw, 25px);
+    text-shadow: 0px 0px 10px black;
+    backdrop-filter: blur(1px);
 }
  
-
 .infoData1{
     position: absolute;
     bottom: 0;
@@ -111,8 +109,6 @@ p[role="About"]{
     width: 100%;
     max-width: 310px;
     font-size: clamp(12px, 10vw, 13px);
- 
-    
 }
 
 button[role='addToCart']{
@@ -140,7 +136,6 @@ button[role='addToCart']:active{
     width: calc(100vw / 2);
     justify-self: center;
     justify-content: center;
-
   }
 }
 
