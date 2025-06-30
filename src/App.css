@@ -1,9 +1,16 @@
 .mainContainer{
+  width: 100vw;
   display: inline-flex;
-  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
- 
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
+}
+
+@media(max-width: 600px){
+  .mainContainer{
+    display: grid;
+    min-height: 100vh;
+    overflow: auto;
+  }
 }
 

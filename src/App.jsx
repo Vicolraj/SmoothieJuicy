@@ -47,7 +47,7 @@ function back(){
 
 
 
-
+//  THE BELLOW CONTAINS THE TEXT THAT WOULD APPEAR ON EACH PAGE
   const productData = [
     {name: 'Green Smoothie', flavour: 'Guava Flavour', img: green, price: '89', maxprice: '101', number: '01',
             about: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae accusantium ad ducimus nemo blanditiis recusandae! Asperiores adipisci veritatis animi!",

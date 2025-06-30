@@ -3,7 +3,7 @@ import berry from '../assets/products/berry.png'
 import { use, useEffect, useState } from 'react';
 import ViewMore from './viewmore.jsx'
 
-const Products= (
+const Products = (
     {content, clicked,
         name=  "Juice Smoothie", flavour = "Apple Flavour", back,   
         img = berry, price = '79', maxprice = '91', number = '01',
@@ -54,7 +54,7 @@ const Products= (
         timeout2 = setTimeout(() => {
             setInfoData1({ opacity: '1', transform: 'translateY(-60px)', filter: 'blur(0px)', transition: '2s' });
             setInfoData2({ opacity: '0', filter: 'blur(5px)', transition: '2s' });
-        }, 2000);
+        }, 1000);
         }
     }, 2000);
     } else {
@@ -100,7 +100,7 @@ const Products= (
                                  }>Back</button>
                 </div>
                 <div className='productImgContainer' style={{...imgAnimation }}>
-                    <img style={{width: content.width}} src={img} alt="productimg" />
+                    <img draggable="false" style={{width: content.width}} src={img} alt="productimg" />
                 </div>
                 <h1 role='name' style={{...backTextAnimation}} className='backText'>{name.substring( 0, name.indexOf(' '))}</h1>
                 <div role='Info' style={{...productInfoAnimation}}  className='productInfo'>
@@ -131,11 +131,14 @@ const Products= (
             </article>
 
             <article className='infoData1' style={{...infoData1}}>
-                        <p role='flavour'><small>{flavour}</small>&nbsp;&nbsp;&nbsp;<small>${Number(price).toFixed(2)}&nbsp;--&nbsp;${Number(maxprice).toFixed(2)}</small></p>
+                        <p role='flavour'>
+                            <small>{flavour}</small>
+                            &nbsp;&nbsp;&nbsp;
+                            <small>${Number(price).toFixed(2)}&nbsp;--&nbsp;${Number(maxprice).toFixed(2)}</small>
+                        </p>
                         <p role='About'>{about}</p>
                         <button role='addToCart'>Add to cart</button>
             </article>
-
             <p style={{...bottomPriceAnimation}} role='price' className='bottomPrice'>${Number(bottomPrice).toFixed(2)}</p>
         </section>
     )

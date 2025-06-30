@@ -132,3 +132,15 @@ button[role='addToCart']:active{
 }
 
 
+@media(max-width: 600px){
+  .productContainer{
+    display: grid;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: calc(100vw / 2);
+    justify-self: center;
+    justify-content: center;
+
+  }
+}
+
